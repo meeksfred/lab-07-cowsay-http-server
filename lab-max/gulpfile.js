@@ -2,7 +2,6 @@
 
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
-const mocha = require('gulp-mocha');
 
 gulp.task('lint', function(){
   return gulp.src(['**/*.js','!node_modules/**'])
@@ -11,13 +10,8 @@ gulp.task('lint', function(){
     .pipe(eslint.failAfterError());
 });
 
-gulp.task('test', function(){
-  gulp.src('./test/*-test.js', {read: false})
-        .pipe(mocha({reporter: 'nyan'}));
-});
-
 gulp.task('dev', function(){
-  gulp.watch(['./*.js', './model/*.js', './test/*.js'], ['test', 'lint']);
+  gulp.watch(['./*.js', './lib/*.js'], ['lint']);
 });
 
 gulp.task('default', ['dev']);
