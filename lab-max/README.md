@@ -9,6 +9,8 @@ To get a different cowsay animal/picture, run: f==(animal). Put this as an addit
     - beavis.zen  bong  bud-frogs  bunny  cheese  cower  daemon  default  doge  dragon-and-cow  dragon  elephant-in-snake  elephant  eyes  flaming-sheep  ghostbusters  goat  head-in  hedgehog  hellokitty  kiss  kitty  koala  kosh  luke-koala  mech-and-cow  meow  milk  moofasa  moose  mutilated  ren  satanic  sheep  skeleton  small  sodomized  squirrel  stegosaurus  stimpy  supermilker  surgery  telebears  turkey  turtle  tux  vader-koala  vader  www
 
 For this project run: brew install httpie
+If using curl from the command line you need to wrap the whole query after the path in a quote:
+  - basic GET : curl localhost:3000/cowsay'?text=hello&f=dragon' (the f query can be ommitted)
 
 - npm modules used:
   - cowsay
